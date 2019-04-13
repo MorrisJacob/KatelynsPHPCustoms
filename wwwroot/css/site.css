@@ -1,0 +1,80 @@
+.carousel-inner .item .container a img{
+    height:480px;
+    width:100%;
+}
+#featured img {
+    height: 160px;
+}
+
+.featured-thumb{
+    height:425px;
+}
+.blockviewimg{
+    max-height:175px;
+}
+.compareimg{
+    max-height:215px;
+}
+
+a{
+    color:blue;
+    text-decoration:underline;
+}
+
+.subMenu a{
+    cursor: pointer;
+}
+
+#srchFld{
+    padding-left:35px;
+}
+
+.thumbpic{
+    height:260px;
+}
+
+.estbox{
+    border:1px solid lightgray;
+    padding:15px;
+    margin:18px 0;
+}
+
+.form-control{
+    width:40%;
+}
+
+.navbar .brand {
+    display: block;
+    float: left;
+    margin: 10px 20px 10px;
+    padding: 0 10px;
+    margin-left: -10px;
+    font-size: 20px;
+    font-weight: 200;
+    color: green;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px dashed lightgreen;
+    text-shadow: 0 1px 0 lightgreen;
+}
+.thumbnail h4 {
+    position: absolute;
+    bottom: -5px;
+    left: 13%;
+    font-size:13.5px;
+}
+
+.thumbnail img{
+    max-height: 275px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) and (max-width: 980px){
+
+.thumbpic{
+    height:150px;
+}
+
+}

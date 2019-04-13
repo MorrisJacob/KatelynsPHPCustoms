@@ -1,0 +1,74 @@
+.header{
+    text-decoration:underline;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.tm-footer{
+    margin-top:30px;
+}
+
+.tm-gold-text-imp a{
+        color: #cc9900 !important;
+}
+
+/*This is the start of the responsive table built based on bootstrap tables*/
+
+.table-responsive-wrapper {
+   border: 1px solid #b7c7cf;
+   margin:20px 0;
+}
+/* For small screen */
+    .table-responsive-wrapper .table-responsive-row:nth-child(even){
+        background-color: #f9f9f9;
+    }
+
+    .table-responsive-wrapper .table-responsive-row:nth-child(odd) {
+        /*background-color: #aaaaaa;*/
+    }
+
+.table-responsive-header {
+    font-size: 18px;
+    padding: 8px;
+    margin: 10px 0;
+    background-color: white !important;
+}
+
+.table-responsive-header div {
+    padding: 0;
+}
+
+.table-responsive-row {
+    padding: 8px;
+    border-top: 1px solid #ddd;
+    margin:0;
+}
+.table-responsive-row div {
+    line-height:35px;
+}
+@media (max-width: 767px){
+    .visible-xs {
+        display: inline !important;
+    }
+    .table-responsive-row div{
+        margin: 10px 0;
+    }
+    .table-responsive-header{
+        display: none !important;
+    }
+}
+/*This is the end of the responsive table built based on bootstrap tables*/
+
+.ordrow:hover{
+    background-color:lightgray;
+}
+.ordrow:onclick{
+    background-color:grey;
+}
+
+.dtltitle{
+    font-weight:bold;
+    text-decoration:underline;
+}

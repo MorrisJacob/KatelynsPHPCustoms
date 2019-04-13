@@ -1,0 +1,1 @@
+[14-Aug-2017 16:28:02] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home2/katelyv6/public_html/php/plumbing/generalfunctions.php:47) in /home2/katelyv6/public_html/php/actions/addtocart.php on line 17

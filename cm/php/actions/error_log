@@ -1,0 +1,1 @@
+[13-Feb-2018 07:44:31] PHP Warning:  unlink(../../../) [<a href='function.unlink'>function.unlink</a>]: Is a directory in /home2/katelyv6/public_html/cm/php/actions/product-delete.php on line 10
