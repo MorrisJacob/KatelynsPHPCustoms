@@ -158,10 +158,16 @@ include('php/master/header.php');
 	 <?php
 		if($userid ==0){
 			echo '<a href="#login" role="button" data-toggle="modal" style="padding-right:0"><span class="btn btn-large btn-success">Login</span></a>';
-		}elseif ($userid == 1){
-			echo '<a href="cm/index.php" style="padding-right:0"><span class="btn btn-large btn-success">Manage</span></a>';
+		}else{
+            echo '<a href="php/actions/logout.php">Logout</a>';
 		}
 	 ?>
+     </li>
+     <?php
+        if($userid == 1){
+            echo '<li><a href="cm/index.php" style="padding-right:0"><span class="btn btn-large btn-success">Manage</span></a></li>';
+        }
+     ?>
 	 
 	<div id="login" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="false" >
 		  <div class="modal-header">
