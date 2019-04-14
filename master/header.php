@@ -164,7 +164,8 @@ include('php/master/header.php');
 	 ?>
      </li>
      <?php
-        if($userid == 1){
+        //Katelyn (owner) or Jacob (Developer)
+        if($userid == 1 || $userid == 2){
             echo '<li><a href="cm/index.php" style="padding-right:0"><span class="btn btn-large btn-success">Manage</span></a></li>';
         }
      ?>
