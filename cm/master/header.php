@@ -63,9 +63,9 @@ http://www.templatemo.com/tm-488-classic
                                 <li class="nav-item">
                                     <a href="accounts.php" class="nav-link">Accounts</a>
                                 </li>
-                                <!--<li class="nav-item">
-                                    <a href="stats.php" class="nav-link">Statistics</a>
-                                </li>-->
+                                <li class="nav-item">
+                                    <a href="coupons.php" class="nav-link">Coupons</a>
+                                </li>
                             </ul>                        
                         </div>
                         

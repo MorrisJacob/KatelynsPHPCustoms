@@ -34,6 +34,10 @@ include('php/pages/product_summary.php');
                   <td colspan="3" style="text-align:right">Total Shipping:	</td>
                   <td> $<?php echo number_format($shipping,2); ?></td>
                 </tr>
+                <tr>
+                    <td colspan="3" style="text-align:right">Total Discount: </td>
+                    <td>-$<?php echo number_format($discount,2); ?></td>
+                </tr>
 				 <tr>
                   <td colspan="3" style="text-align:right"><strong>TOTAL ($<?php echo number_format($total,2); ?> + $<?php echo number_format($shipping,2); ?>) =</strong></td>
                   <td class="label label-important" style="display:block"> <strong> $<?php echo number_format($total + $shipping,2); ?> </strong></td>
@@ -41,25 +45,21 @@ include('php/pages/product_summary.php');
 				</tbody>
             </table>
 
+    <div class="row">
+        <div class="span6" style="text-align:right;">
+            Have a Promo Code?
+        </div>
+        <div class="span3">
+            <input type="text" class="form-control" style="width:100%;" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="span9" style="text-align:right;">
+            * Only one promo code can be used per order&nbsp;
+            <input type="button" class="btn btn-primary" value="Apply" style="float:right;" />
+        </div>
+    </div>
 		
-            <!--<table class="table table-bordered">
-			<tbody>
-				 <tr>
-                  <td> 
-				<form class="form-horizontal">
-				<div class="control-group">
-				<label class="control-label"><strong> VOUCHERS CODE: </strong> </label>
-				<div class="controls">
-				<input type="text" class="input-medium" placeholder="CODE">
-				<button type="submit" class="btn"> ADD </button>
-				</div>
-				</div>
-				</form>
-				</td>
-                </tr>
-				
-			</tbody>
-			</table>-->
 
 	<a href="products.php" class="btn btn-large"><i class="icon-arrow-left"></i> Continue Shopping </a>
 	<form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post" style="display:inline; text-align:right;">

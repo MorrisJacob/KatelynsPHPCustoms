@@ -8,6 +8,7 @@ $cartItems = ExecuteSQL("select o.KeyOrder, p.KeyProduct, p.productname, p.Price
 $cartItemsHTML = "";
 $total = 0;
 $shipping = 0;
+$discount = 0;
 $keyOrder = 0;
 $refresh = false;
 if ($cartItems->num_rows > 0) {
