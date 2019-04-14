@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "katelyv6_kadmin";
-$password = "P@ssW0r3d";
-$dbname = "katelyv6_katelynscustoms";
+$username = "MY_USERNAME";
+$password = "MY_PASSWORD";
+$dbname = "MY_DATABASE";
 
 function ExecuteSQL($sql) {
     // Create connection
