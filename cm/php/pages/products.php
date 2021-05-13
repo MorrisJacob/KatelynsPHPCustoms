@@ -21,7 +21,7 @@ if ($products->num_rows > 0) {
 
     }
 } else {
-    $productsHTML +=  "No Products Available";
+    $productsHTML .=  "No Products Available";
 }
 
 
@@ -44,7 +44,7 @@ if ($productcategories->num_rows > 0) {
 
     }
 } else {
-    $productcategoriesHTML +=  "No Products Available";
+    $productcategoriesHTML .=  "No Product Categories Available";
 }
 
 

@@ -1,5 +1,4 @@
 <?php
-
 $prodcatddl = "<option>All</option>";
 $sideHTML = "";
 $userid = GetSafeString($_SESSION["UserID"]);
@@ -22,27 +21,7 @@ if ($categories->num_rows > 0) {
         
         $prodcatddl .= "<option>" . $catrow["CategoryName"] . "</option>";
 		//sidehtml used for the side navbar
-		$sideHTML .= '<li class="subMenu"><a> ' . $catrow["CategoryName"] . ' [' . $catrow["CategoryCount"] . '] </a>' .
-			    '<ul style="display:none">';
-
-		if($catrow["CategoryCount"] > 0){
-			$products = ExecuteSQL("Select productname, KeyProduct" .
-						" FROM products where categoryname = '" . GetSafeString($catrow["CategoryName"]) . "'");
-			if ($products->num_rows > 0) {
-
-    			while($prodsiderow = $products->fetch_assoc()) {
-					$sideHTML .= '<li><a href="product_details.php?KeyProduct=' . $prodsiderow["KeyProduct"] . '">' . 
-								 '<i class="icon-chevron-right"></i>' . $prodsiderow["productname"] . '</a></li>';
-				}
-
-			}
-
-		}
-			
-
-
-			   $sideHTML .=     '</ul>' .
-			 '</li>';
+		$sideHTML .= '<li class="subMen"><a href="products.php?searchField=&searchSelect=' . $catrow["CategoryName"] . '"> ' . $catrow["CategoryName"] . ' [' . $catrow["CategoryCount"] . '] </a>' . '</li>';
     }
 
 }

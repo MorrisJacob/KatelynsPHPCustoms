@@ -12,7 +12,7 @@ include('php/master/header.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Katelyn's Customs - Content Manager</title>
+    <title>Creative Oddities & Curiosities - Content Manager</title>
 <!--
 Classic Template
 http://www.templatemo.com/tm-488-classic
@@ -40,7 +40,7 @@ http://www.templatemo.com/tm-488-classic
         <div class="tm-header">
             <div class="container-fluid">
                                     <div class="row" style="margin: 15px 0;">
-                        <a class="btn btn-success" href="http://www.katelynscustoms.com/"><< Take Me Back To Public Site</a>
+                        <a class="btn btn-success" href="https://www.creativeodditiesandcuriosities.com/"><< Take Me Back To Public Site</a>
                     </div>    
                 <div class="tm-header-inner">
                     <a href="index.php" class="navbar-brand tm-site-name">Content Management</a>

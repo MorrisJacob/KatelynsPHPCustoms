@@ -27,6 +27,6 @@ if ($coupons->num_rows > 0) {
                         '</div><hr/>';
     }
 } else {
-    $couponsHTML += "No Coupons Available";
+    $couponsHTML .= "No Coupons Available";
 }
 ?>

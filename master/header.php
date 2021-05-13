@@ -1,6 +1,5 @@
-<?php
+<?php session_start();
 error_reporting(E_ALL ^ E_NOTICE);  
-session_start();
 include('php/plumbing/sqlconn.php');
 include('php/plumbing/generalfunctions.php');
 include('php/master/header.php');
@@ -9,7 +8,7 @@ include('php/master/header.php');
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Katelyn's Customs Creations</title>
+    <title>Creative Oddities & Curiosities</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -166,7 +165,7 @@ include('php/master/header.php');
      <?php
         //Katelyn (owner) or Jacob (Developer)
         if($userid == 1 || $userid == 2){
-            echo '<li><a href="cm/index.php" style="padding-right:0"><span class="btn btn-large btn-success">Manage</span></a></li>';
+            echo '<li><a href="cm/index.php" style="padding-right:0" target="_blank"><span class="btn btn-large btn-success">Manage</span></a></li>';
         }
      ?>
 	 

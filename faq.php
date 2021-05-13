@@ -13,7 +13,7 @@
 	  </div>
 	  <div id="collapseOne" class="accordion-body collapse"  >
 		<div class="accordion-inner">
-			Of Course we do! Katelyns CUSTOMSSSSSSS!!!!
+			Of Course we do! Feel free to shoot us an email and we will get back to you with a quote!
 		</div>
 	  </div>
 	</div>

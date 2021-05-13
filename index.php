@@ -1,4 +1,4 @@
-﻿<?php
+<?php
  include('master/header.php');
  include('php/pages/index.php');
  ?>

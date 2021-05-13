@@ -1,5 +1,4 @@
 <?php
-
 $products = ExecuteSQL("Select KeyProduct, ProductName, ImageURL, Quantity, Description, Price, CategoryName" .
 						" FROM products WHERE KeyProduct = " . GetSafeString($_GET["KeyProduct"]) . ";");
 

@@ -101,7 +101,7 @@ if ($products->num_rows > 0) {
 
     }
 } else {
-    $prodhtml +=  "No Products Available";
+    $prodhtml .=  "No Products Available";
 }
 
 ?>

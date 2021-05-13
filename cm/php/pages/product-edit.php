@@ -23,22 +23,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ", Quantity = " . $Quantity .
         ", CategoryName = '" . $CategoryName .
         "', IsFeatured = " . $IsFeatured . " WHERE KeyProduct = " . $keyProduct . ";");
+        
+        echo "<script>location='products.php'</script>";
 
     }else{
-
 		$ImageURL = UploadImage($ProductName);
-
         if($ImageURL != "")
         {
                     ExecuteSQL("INSERT INTO products (ProductName, Description, ImageURL, Price, Quantity, CategoryName, IsFeatured) VALUES " .
         "('" . $ProductName . "', '" . $Description . "', '" . $ImageURL . "', " . $Price . ", " . $Quantity . ", '" . $CategoryName . "', " . $IsFeatured . ");");
-
+        
             echo "<script>location='products.php'</script>";
+
         }
 
         
     }
-
 		
 
 }

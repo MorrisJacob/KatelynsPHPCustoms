@@ -13,9 +13,9 @@ include('php/pages/contact.php');
 		<div class="span4">
 		<h4>Contact Details</h4>
 			<br/><br/>
-			Email: <a href="mailto:BeTheLight@KatelynsCustoms.com">BeTheLight@KatelynsCustoms.com</a><br/><br/>
-			Phone Number: <a href="tel://7654803826">765-480-3826</a><br/><br/>
-			website: <a href="http://www.KatelynsCustoms.com">http://www.KatelynsCustoms.com</a>
+			Email: <a href="mailto:myerskatelyn675@gmail.com">myerskatelyn675@gmail.com</a><br/><br/>
+			Phone Number: <a href="tel://7655138703">765-513-8703</a><br/><br/>
+			website: <a href="https://www.creativeodditiesandcuriosities.com">https://www.CreativeOdditiesAndCuriosities.com</a>
 		</p>		
 		</div>
 			
