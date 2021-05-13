@@ -3,7 +3,7 @@
  include('php/pages/index.php');
  ?>
 <!-- Header End====================================================================== -->
-<?php include('controls/carousel.php');?>
+<?php #include('controls/carousel.php');?>
 <div id="mainBody">
 	<div class="container">
 		<div class="row">
