@@ -39,8 +39,8 @@ include('php/pages/product_summary.php');
                     <td>-$<?php echo number_format($discount,2); ?></td>
                 </tr>
 				 <tr>
-                  <td colspan="3" style="text-align:right"><strong>TOTAL ($<?php echo number_format($total,2); ?> + $<?php echo number_format($shipping,2); ?>) =</strong></td>
-                  <td class="label label-important" style="display:block"> <strong> $<?php echo number_format($total + $shipping,2); ?> </strong></td>
+                 <td colspan="3" style="text-align:right"><strong>TOTAL ($<?php echo number_format($total,2); ?> + $<?php echo number_format($shipping,2); ?> - $<?php echo number_format($discount,2) ?>) =</strong></td>
+                  <td class="label label-important" style="display:block"> <strong> $<?php echo number_format($total + $shipping - $discount,2); ?> </strong></td>
                 </tr>
 				</tbody>
             </table>
@@ -50,13 +50,13 @@ include('php/pages/product_summary.php');
             Have a Promo Code?
         </div>
         <div class="span3">
-            <input type="text" class="form-control" style="width:100%;" />
+            <input id="txtPromo" type="text" class="form-control" style="width:100%;" />
         </div>
     </div>
     <div class="row">
         <div class="span9" style="text-align:right;">
             * Only one promo code can be used per order&nbsp;
-            <input type="button" class="btn btn-primary" value="Apply" style="float:right;" />
+            <input id="btnPromo" type="button" class="btn btn-primary" value="Apply" style="float:right;" />
         </div>
     </div>
 		
@@ -68,13 +68,22 @@ include('php/pages/product_summary.php');
 <input type="hidden" name="currency_code" value="USD">
 <input type='hidden' name='rm' value='2'>
 <input type="hidden" name="item_name" value="<?php echo $keyOrder ?>">
-<input type="hidden" name="amount" value="<?php echo number_format($total + $shipping,2); ?>">
+<input type="hidden" name="amount" value="<?php echo number_format($total + $shipping - $discount,2); ?>">
 <input type="image" src="http://www.paypal.com/en_GB/i/btn/x-click-but01.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
 </form>
 	
 </div>
 </div></div>
 </div>
+
+<script>
+$(function(){
+    $('#btnPromo').on('click', function(){
+        let couponCode = $('#txtPromo').val();
+        window.location.replace("php/actions/applydiscount.php?CouponCode=" + couponCode);
+    });
+});
+</script>
 <!-- MainBody End ============================= -->
 <!-- Footer ================================================================== -->
 <?php include('master/footer.php');?>

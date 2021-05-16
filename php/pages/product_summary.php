@@ -1,9 +1,10 @@
 <?php
 //some variables are already created and reused from header.php
 
-$cartItems = ExecuteSQL("select o.KeyOrder, p.KeyProduct, p.productname, p.Price, p.ImageURL, c.Quantity from " . 
+$cartItems = ExecuteSQL("select o.KeyOrder, p.KeyProduct, p.productname, p.Price, p.ImageURL, c.Quantity, co.DiscountAmount from " . 
                         "cart c inner join products p on c.KeyProduct = p.KeyProduct " .
-                        "INNER JOIN orders o ON c.KeyOrder = o.KeyOrder where o.KeyOrder = " . GetKeyOrder($userid) . ";");
+                        "INNER JOIN orders o ON c.KeyOrder = o.KeyOrder " .
+                        "LEFT JOIN coupon co on o.KeyCoupon = co.KeyCoupon where o.KeyOrder = " . GetKeyOrder($userid) . ";");
 
 $cartItemsHTML = "";
 $total = 0;
@@ -42,6 +43,7 @@ if ($cartItems->num_rows > 0) {
                   '<td>$' . number_format($cartrow["Price"] * $cartrow["Quantity"], 2) . '</td>' .
                 '</tr>';
             $total += $cartrow["Price"] * $cartrow["Quantity"];
+            $discount = $cartrow["DiscountAmount"];
     }
 
     $shipping = 8;

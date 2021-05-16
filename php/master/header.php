@@ -21,7 +21,7 @@ if ($categories->num_rows > 0) {
         
         $prodcatddl .= "<option>" . $catrow["CategoryName"] . "</option>";
 		//sidehtml used for the side navbar
-		$sideHTML .= '<li class="subMen"><a href="products.php?searchField=&searchSelect=' . $catrow["CategoryName"] . '"> ' . $catrow["CategoryName"] . ' [' . $catrow["CategoryCount"] . '] </a>' . '</li>';
+		$sideHTML .= '<li class="subMen"><a href="products.php?searchField=&searchSelect=' . urlencode($catrow["CategoryName"]) . '"> ' . $catrow["CategoryName"] . ' [' . $catrow["CategoryCount"] . '] </a>' . '</li>';
     }
 
 }
