@@ -10,6 +10,11 @@ include('php/pages/products.php');
         <section class="tm-section">
             <div class="container">
                 <div class="row" style="margin:20px 0;">
+                    <div class="col-xs-8">
+                        <input type="text" id="prod-search" class="form-control" placeholder="Search for a product or product category..." />
+                    </div>
+                </div>
+                <div class="row" style="margin:20px 0;">
                     <div class="col-xs-12">
                         Please select a product or product category to edit.
                     </div>
@@ -101,17 +106,35 @@ include('php/pages/products.php');
 
 <script>
 $(function(){
-$(document).on("click", ".catdel", function () {
-     var catDel = $(this).data('id');
-     var href = $("#catadel").attr("href");
-     $("#catadel").attr("href", href + '?KeyCategory=' + catDel);
-});
+    $(document).on("click", ".catdel", function () {
+         var catDel = $(this).data('id');
+         var href = $("#catadel").attr("href");
+         $("#catadel").attr("href", href + '?KeyCategory=' + catDel);
+    });
 
-$(document).on("click", ".proddel", function () {
-    var prodDel = $(this).data('id');
-    var href = $("#prodadel").attr("href");
-    $("#prodadel").attr("href", href + '?KeyProduct=' + prodDel);
-});
+    $(document).on("click", ".proddel", function () {
+        var prodDel = $(this).data('id');
+        var href = $("#prodadel").attr("href");
+        $("#prodadel").attr("href", href + '?KeyProduct=' + prodDel);
+    });
+
+    $('#prod-search').on('keyup', function() {
+        let items = $('.prod-search');
+        let searchVal = $('#prod-search').val().toLowerCase();
+
+        if(searchVal == ''){
+            $('.prod-search').css('display', 'block');
+        }else{
+            $('.prod-search').each(function(i,e){
+                thisVal = $(this).first('div').html().toLowerCase();
+                if(thisVal.includes(searchVal)){
+                    $(this).css('display', 'block');
+                }else {
+                    $(this).css('display', 'none');
+                }
+            });
+        }
+    });
 });
 </script>
 
