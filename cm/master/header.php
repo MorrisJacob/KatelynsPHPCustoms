@@ -1,6 +1,6 @@
 <?php
-error_reporting(E_ALL ^ E_NOTICE);  
 session_start();
+error_reporting(E_ALL ^ E_NOTICE);  
 include('php/plumbing/sqlconn.php');
 include('php/plumbing/generalfunctions.php');
 include('php/master/header.php');

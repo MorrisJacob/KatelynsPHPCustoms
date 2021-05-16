@@ -57,6 +57,11 @@ a{
     border: 1px dashed lightgreen;
     text-shadow: 0 1px 0 lightgreen;
 }
+
+.navbar-inner {
+    background-image: none;
+    background-color:black;
+}
 .thumbnail h4 {
     position: absolute;
     bottom: -5px;
@@ -92,4 +97,22 @@ a{
 .nav-title:hover {
     color:white;
     text-decoration: none;
+}
+
+.btn-white, .btn-white:hover {
+    background-image: none;
+    background-color:white;
+    color:black;
+}
+
+.btn-go, .btn-go:hover {
+    background-image: none;
+    background-color: white;
+    color:black;
+}
+
+.btn-mini, .btn-mini:hover {
+    background-image: none;
+    background-color: black;
+    color: white;
 }

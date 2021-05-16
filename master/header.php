@@ -146,7 +146,7 @@ include('php/master/header.php');
 		  <select class="srchTxt" name="searchSelect">
 			<?php echo $prodcatddl;?>
 		</select> 
-		  <button type="submit" id="submitButton" class="btn btn-primary">Go</button>
+		  <button type="submit" id="submitButton" class="btn btn-primary btn-go">Go</button>
     </form>
     <ul id="topMenu" class="nav pull-right">
 	 <!--<li class=""><a href="special_offer.html">Specials Offer</a></li>-->
@@ -156,7 +156,7 @@ include('php/master/header.php');
 	 <li class="">
 	 <?php
 		if($userid ==0){
-			echo '<a href="#login" role="button" data-toggle="modal" style="padding-right:0"><span class="btn btn-large btn-success">Login</span></a>';
+			echo '<a href="#login" role="button" data-toggle="modal" style="padding-right:0"><span class="btn btn-large btn-success btn-white">Login</span></a>';
 		}else{
             echo '<a href="php/actions/logout.php">Logout</a>';
 		}
@@ -165,7 +165,7 @@ include('php/master/header.php');
      <?php
         //Katelyn (owner) or Jacob (Developer)
         if($userid == 1 || $userid == 2){
-            echo '<li><a href="cm/index.php" style="padding-right:0" target="_blank"><span class="btn btn-large btn-success">Manage</span></a></li>';
+            echo '<li><a href="cm/index.php" style="padding-right:0" target="_blank"><span class="btn btn-large btn-success btn-white">Manage</span></a></li>';
         }
      ?>
 	 
