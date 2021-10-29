@@ -16,8 +16,12 @@ include('php/pages/products.php');
 	<h3> Products <small class="pull-right"> <?php echo $prodCount; ?> product(s) are available </small></h3>	
 	<hr class="soft"/>
 	<p>
-		All of our products can be custom made for your liking! If you would like anything custom done, please let us know!
+        Most of our products are sent as is. Wet specimens will be shipped WITHOUT fluid which will need replaced as soon as the item is shipped. If there are any specimens or custom works that you are interested in requesting, find your preferred method of communication under the contact tab ! If you have any comments, questions or concerns, please let us know!
+
 	</p>
+    <p>
+         Products photographed by Gabriel Colbert. Find their info under our contact tab. 
+    </p>
 	<hr class="soft"/>
 	<form method="GET" action="products.php" class="form-horizontal span6">
 		<div class="control-group">
