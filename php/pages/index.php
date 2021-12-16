@@ -1,54 +1,5 @@
 <?php
 
-//start featured products
-
-$featuredproducts = ExecuteSQL("Select ProductName, KeyProduct, ImageURL, Price" .
-						" FROM Products WHERE IsFeatured = 1;");
-$displayfeatured = "none";
-$featuredHTML = "";
-$featuredcount = 0;
-$featurednum = $featuredproducts->num_rows;
-if ($featuredproducts->num_rows > 0) {
-    //there are featured products, so show featured
-    $displayfeatured = "block";
-    //now, loop through the featured
-    $featuredHTML = '<div class="item active">' .
-			  				'<ul class="thumbnails">';
-    while($featuredrow = $featuredproducts->fetch_assoc()) {
-
-        $featuredHTML .= '<li class="span3">' .
-				  		    '<div class="thumbnail">' .
-				  				'<i class="tag"></i>' .
-								'<a href="product_details.php?KeyProduct=' . $featuredrow["KeyProduct"] . '">' .   
-                                    '<img src="' . $featuredrow["ImageURL"] . '" alt="' . $featuredrow["ProductName"] . '">' . 
-                                '</a>' .
-								'<div class="caption">' .
-					 				'<h5>' . $featuredrow["ProductName"] . '</h5>' .
-					  				'<h4><a class="btn" href="product_details.php?KeyProduct=' . $featuredrow["KeyProduct"] . '">VIEW</a>' . 
-                                    '<span class="pull-right"> $' . $featuredrow["Price"] . ' Each</span></h4>' .
-								'</div>' .
-				  			'</div>' .
-						 '</li>';
-
-        $featuredcount += $featuredcount;
-        //every four products we need to start a new item row
-        if($featuredcount % 4 == 0){
-            $featuredHTML .= "</div></ul><div class='item'><ul class='thumbnails'>";
-        }
-
-    }
-
-    $featuredHTML .= "</div></ul>";
-
-}
-
-
-//end featured products
-
-
-
-
-
 
 //start latest products
 $latestproducts = ExecuteSQL("Select ProductName, KeyProduct, ImageURL, Description, Price" .
@@ -89,4 +40,51 @@ if ($latestproducts->num_rows > 0) {
 }
 
 //end latest products
+    
+    
+    //start featured products
+    //$featuredproducts = ExecuteSQL("Select ProductName, KeyProduct, ImageURL," //. " Price" .
+          //                  " FROM Products WHERE IsFeatured = 1;");
+    $featuredproducts = ExecuteSQL("Select ProductName, KeyProduct, ImageURL, Price" .
+                            " FROM products WHERE IsFeatured = 1;");
+    // $displayfeatured = "none";
+    $displayfeatured = "none";
+    $featuredHTML = "";
+    $featuredcount = 0;
+    if ($featuredproducts->num_rows > 0) {
+        //there are featured products, so show featured
+        $displayfeatured = "block";
+        //now, loop through the featured
+        $featuredHTML = '<div class="item active">' .
+                                  '<ul class="thumbnails">';
+        while($featuredrow = $featuredproducts->fetch_assoc()) {
+
+            $featuredHTML .= '<li class="span3">' .
+                                  '<div class="thumbnail">' .
+                                      '<i class="tag"></i>' .
+                                    '<a href="product_details.php?KeyProduct=' . $featuredrow["KeyProduct"] . '">' .
+                                        '<img src="' . $featuredrow["ImageURL"] . '" alt="' . $featuredrow["ProductName"] . '">' .
+                                    '</a>' .
+                                    '<div class="caption">' .
+                                         '<h5>' . $featuredrow["ProductName"] . '</h5>' .
+                                          '<h4 style="bottom:-21px;"><a class="btn" href="product_details.php?KeyProduct=' . $featuredrow["KeyProduct"] . '">VIEW</a>' .
+                                        '<span class="pull-right"> $' . $featuredrow["Price"] . ' Each</span></h4>' .
+                                    '</div>' .
+                                  '</div>' .
+                             '</li>';
+
+            $featuredcount += 1;
+            //every four products we need to start a new item row
+            if($featuredcount % 4 == 0){
+                $featuredHTML .= "</div></ul><div class='item'><ul class='thumbnails'>";
+            }
+
+        }
+
+        $featuredHTML .= "</div></ul>";
+
+    }
+
+
+    //end featured products
 ?>

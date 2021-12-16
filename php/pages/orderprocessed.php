@@ -30,10 +30,10 @@ if($curr == "USD" && $status == "Completed" && $acctID == "XZS876HWCDKP4"){
             "SET p.Quantity = p.Quantity - c.Quantity " .
             "WHERE o.KeyOrder = " . $keyOrder . ";");
 
-        SendEmail("bethelight@katelynscustoms.com", "An order has been entered!", "An order for $" . $payment . " has been paid for on your site!");
+        SendEmail("myerskatelyn675@gmail.com", "An order has been entered!", "An order for $" . $payment . " has been paid for on your site!");
     }else{
         //it seems weird to me that they would make it this far and not pay. Let's send an email for a manual check
-        SendEmail("bethelight@katelynscustoms.com", "Hmm.. That's odd", "An order has gone through half of the validation. However, " . 
+        SendEmail("myerskatelyn675@gmail.com", "Hmm.. That's odd", "An order has gone through half of the validation. However, " . 
         "It failed at payment and keyOrder. The payment info from Paypal said $" . $payment . " for order " . $keyOrder . ". However, our DB says $" .
         number_format($gross,2) . " for order " . $trueKey);
     }

@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $orderSummary = ExecuteSQL("select u.EmailAddress, u.FirstName, u.LastName, u.PhoneNumber, a.City, a.State, a.Zip, a.Address1, " .
                 "a.Address2, o.DatePaid, o.KeyOrder from users u inner join address a on u.UserID = a.UserID " .
-                "inner join orders o on o.UserID = u.UserID where o.DatePaid is not null and o.DateShipped is null order by o.DatePaid desc");
+                "inner join orders o on o.UserID = u.UserID where o.DateShipped is null order by o.DatePaid desc");
 
 $orderHTML = "";
 

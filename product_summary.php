@@ -64,7 +64,7 @@ include('php/pages/product_summary.php');
 	<a href="products.php" class="btn btn-large"><i class="icon-arrow-left"></i> Continue Shopping </a>
 	<form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post" style="display:inline; text-align:right;">
 <input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="business" value="bethelight@katelynscustoms.com">
+<input type="hidden" name="business" value="myerskatelyn675@gmail.com">
 <input type="hidden" name="currency_code" value="USD">
 <input type='hidden' name='rm' value='2'>
 <input type="hidden" name="item_name" value="<?php echo $keyOrder ?>">
