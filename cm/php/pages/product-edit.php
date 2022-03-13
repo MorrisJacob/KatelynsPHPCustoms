@@ -45,6 +45,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $keyProduct = GetSafeString($_GET["KeyProduct"]);
 
+    if ($keyProduct == ''){
+        $keyProduct = 0;
+    }
+
     $catddl = "";
     $prodInfo = ExecuteSQL("SELECT ProductName, Description, Price, Quantity, CategoryName, CAST(IsFeatured AS unsigned int) IsFeatured" .
                                 " FROM products WHERE KeyProduct = " . $keyProduct . " LIMIT 1;");
@@ -134,7 +138,7 @@ function UploadImage($productName){
 		}
 	}
 
-	return str_replace('../', '', $target_file);
+	return str_replace('..', '', $target_file);
 
 }
 ?>
