@@ -12,16 +12,17 @@ include('php/pages/contact.php');
 	<div class="row contact">
 		<div class="span4">
 		<h4>Contact Details</h4>
-            <br/><br/>Curiosities By:<br/>
+            Curiosities By:<br/>
             <div style="font-weight:bold;">Katelyn Myers</div><br/>
 			Email: <a href="mailto:myerskatelyn675@gmail.com">myerskatelyn675@gmail.com</a><br/>
 			Phone Number: <a href="tel://7655138703">765-513-8703</a><br/>
-			website: <a href="https://www.creativeodditiesandcuriosities.com">https://www.CreativeOdditiesAndCuriosities.com</a>
-        <br/><br/>Photography By:<br/>
-            <div style="font-weight:bold;">Gabriel Colbert</div>
-            <a href="https://www.instagram.com/photography.from.gabe"><img src="themes/images/instagram.png" style="width:35px;padding: 7px 0;" />@photography.from.gabe </a><br/>
-            Email: <a href="mailto:gabethecargoyle@gmail.com">gabethecargoyle@gmail.com</a><br/>
-            Call or Text: <a href="tel://7652717723">765-271-7723</a><br/><br/>
+			website: <a href="https://www.creativeodditiesandcuriosities.com">https://www.CreativeOdditiesAndCuriosities.com</a><br/><br/>
+            Photography By:<br/>
+            <div style="font-weight:bold;">Hayden Scott</div><br/>
+            Email: <a href="mailto:hjscott1203@gmail.com">hjscott1203@gmail.com</a><br/>
+            Phone Number: <a href="tel://3173858934">317-385-8934</a><br/>
+            Facebook: <a href="https://www.facebook.com/hayden.scott.142240" target="_blank">Hayden Scott (Stix Photography)</a><br/>
+            Instagram: <a href="https://www.instagram.com/stixphotography/" target="_blank">@Stixphotography</a>
 		</div>
 			
 		<div class="span4">

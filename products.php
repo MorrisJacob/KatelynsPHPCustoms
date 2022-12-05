@@ -20,7 +20,7 @@ include('php/pages/products.php');
 
 	</p>
     <p>
-         Products photographed by Gabriel Colbert. Find their info under our contact tab. 
+         Products photographed by Hayden Scott. Find their info on our <a href="/contact.php">Contact page</a>. 
     </p>
 	<hr class="soft"/>
 	<form method="GET" action="products.php" class="form-horizontal span6">
