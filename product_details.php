@@ -36,13 +36,15 @@ include('php/pages/products_details.php');
               </div>
 			  
 			 <div class="btn-toolbar">
-			  <div class="btn-group">
+			  <div class="row" id="prod--images">
 				<!--<span class="btn"><i class="icon-envelope"></i></span>
 				<span class="btn" ><i class="icon-print"></i></span>
 				<span class="btn" ><i class="icon-star"></i></span>
 				<span class="btn" ><i class=" icon-thumbs-up"></i></span>
-				<span class="btn" ><i class="icon-thumbs-down"></i></span>-->
-				<span class="btn" onclick="OpenPhotoSwipe('<?php echo $imageURL; ?>');" ><i class="icon-zoom-in"></i></span>
+				<span class="btn" ><i class="icon-thumbs-down"></i></span>
+<span class="btn" onclick="OpenPhotoSwipe('<?php echo $imageURL; ?>');" ><i class="icon-zoom-in"></i></span>-->
+				<?php echo $relatedImagesHTML; ?>
+				
 			  </div>
 			</div>
 			</div>

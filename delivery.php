@@ -12,19 +12,37 @@
 				<hr class="soft"/>
 				<h5>Delivery</h5><br/>
 				<ul>
-                                    <li>A flat rate of $8 will be applied to any shipments</li>
-                                    <li>Delivery may take up to 1 month once payment is received. Any ordered
-product that has been available for pick up for at least three months
-without effort towards payment or contact will be put towards inventory
-in our items available at Mary Jayne's Market or online for purchase.
+                                    <li>A flat rate of $10 will be applied to any shipments</li>
+				    <li>Delivery usually takes 5-7 days after shipment date</li>
+                                    <li>Delivery may take up to 3 weeks after payment is received.
                                     </li>
+                                    <!--<li>Some items are marked as "Too Fragile". These items are available for 
+                                        delivery up to 50 miles radius from Kokomo, IN 46901. Anything further
+                                        will be charged a $50 delivery fee.
+                                    </li>-->
+				    <li>Shipping/Tracking Info will be provided for your package.</li>
 				</ul>
 				<h5>Pickup</h5><br/>
 				<p>
-					Available for personal pick up at Mary
-Jayne's Market in Kokomo, IN. No card transaction options available at our pickup location at
-this time. Sorry for the inconvenience.
+                    Any item is available for personal pick up upon request. Local to Kokomo, IN. Please contact Katelyn Myers at <a href="tel:7655138703">(765)513-8703</a>
+                    specifying which item(s) were purchased. 
 				</p>
+                <h5>Locations</h5><br/>
+                <p>Some items are available at various locations in Kokomo, IN. Specified items are also displayed with Matthew Davidson at Bohemian Tattoo Club:</p><br/>
+                <div style="width:48%;display:inline-block;">
+                    <b>Pinpoint Piercing</b><br/>
+                    918 S. Main St.<br/>
+                    Kokomo, IN 46901<br/>
+                    Mon-Sat 12pm - 8pm<br/>
+                    <a href="tel:7656393574">(765)639-3574</a>
+                </div>
+                <div style="width:48%;display:inline-block;">
+                    <b>Bohemian Tattoo</b><br/>
+                    206 N Main St.<br/>
+                    Kokomo, IN 46901<br/>
+                    Appointment Only<br/>
+                    <a href="tel:7654340066">(765)434-0066</a>
+                </div>
 			</div>
 		</div>
 	</div>

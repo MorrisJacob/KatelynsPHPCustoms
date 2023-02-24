@@ -23,6 +23,17 @@ include('php/pages/products.php');
 
                     <div class="col-xs-4">
                         <h3 class="header">Product Categories</h3>
+                        <div class="row tm-gold-text-imp" style="margin: 10px 0;">
+                            <a href="productcategory-edit.php?KeyCategory=0">
+			                        <div class="col-xs-8">
+                                        Add A New Category
+                                    </div>
+                                    <div class='col-xs-4'>
+                                    <div class="btn btn-success"  style="padding:2px 8px;">
+                                    <i class="fa fa-plus" aria-hidden="true"></i></div>
+			                        </div>
+                            </a>
+		        </div>
                         <?php echo $productcategoriesHTML; ?>
 
                         <div class="row tm-gold-text-imp" style="margin: 10px 0;">
@@ -41,8 +52,6 @@ include('php/pages/products.php');
 
                     <div class="col-xs-7 col-xs-push-1">
                         <h3 class="header">Products</h3>
-                        <?php echo $productsHTML; ?>
-
                         <div class="row tm-gold-text-imp" style="margin: 10px 0;">
                         <a href="product-edit.php?KeyProduct=0">
 			                <div class="col-xs-10">
@@ -54,8 +63,20 @@ include('php/pages/products.php');
 			                    </div>
                             </div>
                         </a>
-		                </div>
-
+		        </div>
+                        <?php echo $productsHTML; ?>
+                        <div class="row tm-gold-text-imp" style="margin: 10px 0;">
+                        <a href="product-edit.php?KeyProduct=0">
+			                <div class="col-xs-10">
+                                 Add A New Product
+			                </div>
+                            <div class="col-xs-2">
+                                <div class="btn btn-success"  style="padding:2px 8px;">
+                                    <i class="fa fa-plus" aria-hidden="true"></i>
+			                    </div>
+                            </div>
+                        </a>
+		        </div>
                     </div>
                 </div>
                 

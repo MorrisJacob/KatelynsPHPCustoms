@@ -41,12 +41,29 @@ include('php/pages/product-edit.php');
 	if($keyProduct == 0){
 		echo 	    '<div class="row" style="margin:10px 0;">' .
 						'<div class="col-xs-12 col-sm-2">' .
-							'Image Upload:' .
+							'Primary Image Upload:' .
 						'</div>' .
 						'<div class="col-xs-12 col-sm-6">' .
 							'<input type="file" name="fileToUpload" id="fileToUpload">' .
 						'</div>' .
+					'</div>' .
+				'<div class="row" style="margin:10px 0;">' .
+						'<div class="col-xs-12 col-sm-2">' .
+							'Additional Images:' .
+						'</div>' .
+						'<div class="col-xs-12 col-sm-6">' .
+							'<input type="file" name="fileToUploadAdditional[]" id="fileToUploadAdditional" multiple>' .
+						'</div>' .
 					'</div>';
+	} else {
+
+	echo '<div class="row" style="margin:10px 0;"><div class="col-sm-2 col-xs-12">' .
+              	'Primary Image:</div><div class="col-sm-9 col-xs-12"><img src="../' . $ImageURL . '" class="img img-fluid" style="max-width:100px;max-height:100px;display:inline;" /> New Primary Image: <input type="file" name="fileToUpload" id="fileToUpload">' .
+	     '</div></div>';
+
+	echo '<div class="row" style="margin:10px 0;"><div class="col-sm-2 col-xs-12">Additional Images:</div><div class="col-sm-9 col-xs-12">' . $secondaryImageHTML . ' Additional Images: <input type="file" name="fileToUploadAdditional[]" id="fileToUploadAdditional" multiple></div></div>';
+
+
 	}
 	?>
     <div class="row" style="margin:10px 0;">
@@ -101,6 +118,42 @@ include('php/pages/product-edit.php');
     </div>
 
 </div>
+
+
+<!-- Modal for deleting additional images -->
+<div class="modal fade" id="deleteImageModal" tabindex="-1" role="dialog" aria-labelledby="deleteImageModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="width:90%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteImageModalLabel">Delete Product Image</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete this image? Once complete this operation cannot be undone!
+            </div>
+            <div class="modal-footer">
+                <a id="imgdel" href="php/actions/productimage-delete.php" class="btn btn-danger">Yes, Delete This Product Image</a>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+$(function(){
+    $(document).on("click", ".imgdel", function () {
+         var imgDel = $(this).data('id');
+         var href = $("#imgdel").attr("href");
+         $("#imgdel").attr("href", href + '?KeyImage=' + imgDel);
+    });
+});
+</script>
+
+
+
 
 </form>
 
