@@ -108,6 +108,16 @@ include('php/pages/product-edit.php');
         </div>
     </div>
 
+    <div class="row" style="margin:10px 0;">
+
+        <div class="col-xs-12 col-sm-2">
+            Sold Out?:
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <input type="checkbox" name="IsSoldOut" class="form-control" value="true" <?php if($IsSoldOut){echo "checked";} ?> />
+        </div>
+    </div>
+
     <div class="row" style="margin:40px 0;">
         <div class="col-xs-6">
             <input type="submit" class="btn btn-success" />

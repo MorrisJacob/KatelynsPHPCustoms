@@ -27,7 +27,7 @@ if(isset($_GET["searchSelect"]) && $_GET["searchSelect"] != "All"){
 	$condition = $condition . " AND CategoryName = '" . GetSafeString($_GET["searchSelect"]) . "'";
 }
 
-$products = ExecuteSQL("Select ProductName, ImageURL, KeyProduct, Quantity, Description, Price" .
+$products = ExecuteSQL("Select ProductName, ImageURL, KeyProduct, Quantity, Description, Price, IsSoldOut" .
 						" FROM products WHERE " . $condition . " ORDER BY " . $order);
 
 $producthtml_blockview = "";
@@ -41,7 +41,14 @@ if ($products->num_rows > 0) {
 		if(strlen($row["Description"]) > 100){
 			$row["Description"] = substr($row["Description"], 0, 95) . "...";
 		}
-		
+		$shopping_cart_list = '<a href="php/actions/addtocart.php?KeyProduct=' . $row["KeyProduct"] . '" class="btn btn-large btn-primary">Add to <i class=" icon-shopping-cart"></i></a>';
+		$shopping_cart_block = '<a class="btn" href="php/actions/addtocart.php?KeyProduct=' . $row["KeyProduct"] . '">Add to <i class=" icon-shopping-cart"></i></a>';
+		if($row["IsSoldOut"] == 1){
+			$shopping_cart_list = '<span style="color:red;">&nbsp;SOLD OUT&nbsp;</span>';
+			$shopping_cart_block = $shopping_cart_list;
+			// Remove item from number of available items if it is sold out;
+			$prodCount -= 1;
+		}
         $producthtml_listview .= '<div class="row">' .
 			'<div class="span2">' .
 				'<img src="' . $row["ImageURL"] . '" alt="' . $row["ProductName"] . '"/>'.
@@ -62,8 +69,7 @@ if ($products->num_rows > 0) {
 			'<label class="checkbox">' .
 				'<input type="checkbox">  Add Product to Compare' .
 			'</label><br/>' .
-			'' .
-			  '<a href="product_details.php" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>' .
+				$shopping_cart_list . 
 			  '<button type="button" onclick="OpenPhotoSwipe(\'' . $row["ImageURL"] . '\');" class="btn btn-large"><i class="icon-zoom-in"></i></button>' .
 			'' .
 				'</form>' .
@@ -83,7 +89,7 @@ if ($products->num_rows > 0) {
 				  '</p>' .
 				   '<h4 style="text-align:center">' . 
                    '<button type="button" onclick="OpenPhotoSwipe(\'' . $row["ImageURL"] . '\');" class="btn"><i class="icon-zoom-in"></i></button>' . 
-                   '<a class="btn" href="php/actions/addtocart.php?KeyProduct=' . $row["KeyProduct"] . '">Add to <i class="icon-shopping-cart"></i></a>' .
+                   $shopping_cart_block .
 						  '<span> $' . $row["Price"] . '</span></h4>' .
 				'</div>' .
 			  '</div>' .

@@ -57,7 +57,7 @@ include('php/pages/products_details.php');
 					<label class="control-label"><span><?php echo "$" . $productprice; ?></span></label>
 					<div class="controls">
 					<input type="number" class="span1" id="ProdQuant" placeholder="Qty." value="1" />
-					  <a id="CartLink" href="php/actions/addtocart.php?KeyProduct=<?php echo $keyproduct ?>" onclick="AddQuantity();" class="btn btn-large btn-primary pull-right"> Add to cart <i class=" icon-shopping-cart"></i></a>
+					<?php echo $add_to_cart; ?>
 					</div>
 				  </div>
 				</form>

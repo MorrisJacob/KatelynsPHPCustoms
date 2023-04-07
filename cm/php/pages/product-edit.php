@@ -10,9 +10,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $Quantity = GetSafeString($_POST["Quantity"]);
     $CategoryName = GetSafeString($_POST["CatName"]);
     $IsFeatured = GetSafeString($_POST["Featured"]);
+    $IsSoldOut = GetSafeString($_POST["IsSoldOut"]);
 
     if($IsFeatured == ""){
         $IsFeatured = "false";
+    }
+    if($IsSoldOut == ""){
+	$IsSoldOut = "false";
     }
 
     if($keyProduct > 0){
@@ -31,7 +35,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         "', Price = " . $Price .
         ", Quantity = " . $Quantity .
         ", CategoryName = '" . $CategoryName .
-        "', IsFeatured = " . $IsFeatured . $ImageUpdate . " WHERE KeyProduct = " . $keyProduct . ";");
+        "', IsSoldOut = " . $IsSoldOut .
+        ", IsFeatured = " . $IsFeatured . $ImageUpdate . " WHERE KeyProduct = " . $keyProduct . ";");
         
 	//Allow user to upload additional images
 	
@@ -53,8 +58,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$ImageURL = UploadImage($ProductName);
         if($ImageURL != "")
         {
-                    ExecuteSQL("INSERT INTO products (ProductName, Description, ImageURL, Price, Quantity, CategoryName, IsFeatured) VALUES " .
-        "('" . $ProductName . "', '" . $Description . "', '" . $ImageURL . "', " . $Price . ", " . $Quantity . ", '" . $CategoryName . "', " . $IsFeatured . ");");
+                    ExecuteSQL("INSERT INTO products (ProductName, Description, ImageURL, Price, Quantity, CategoryName, IsFeatured IsSoldOut) VALUES " .
+        "('" . $ProductName . "', '" . $Description . "', '" . $ImageURL . "', " . $Price . ", " . $Quantity . ", '" . $CategoryName . "', " . $IsFeatured . ", " . $IsSoldOut . ");");
        
 
         }
@@ -87,7 +92,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     $catddl = "";
-    $prodInfo = ExecuteSQL("SELECT ProductName, Description, Price, Quantity, CategoryName, CAST(IsFeatured AS unsigned int) IsFeatured, ImageURL" .
+    $prodInfo = ExecuteSQL("SELECT ProductName, Description, Price, Quantity, CategoryName, " . 
+			   " CAST(IsFeatured AS unsigned int) IsFeatured, CAST(IsSoldOut AS unsigned int) IsSoldOut, ImageURL" .
                                 " FROM products WHERE KeyProduct = " . $keyProduct . " LIMIT 1;");
     $selected = "";
     $catChoices = ExecuteSQL("SELECT KeyCategory, CategoryName FROM productcategories");
@@ -103,6 +109,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $CategoryName = $prodRow["CategoryName"];
         $IsFeatured = $prodRow["IsFeatured"];
 	$ImageURL = $prodRow["ImageURL"];
+	$IsSoldOut = $prodRow["IsSoldOut"];
     }
     if ($catChoices->num_rows > 0) {
         // output data of each row

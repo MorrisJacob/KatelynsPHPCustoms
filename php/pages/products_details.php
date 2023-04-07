@@ -1,6 +1,8 @@
 <?php
-$products = ExecuteSQL("Select KeyProduct, ProductName, ImageURL, Quantity, Description, Price, CategoryName" .
+$products = ExecuteSQL("Select KeyProduct, ProductName, ImageURL, Quantity, Description, Price, CategoryName, IsSoldOut" .
 						" FROM products WHERE KeyProduct = " . GetSafeString($_GET["KeyProduct"]) . ";");
+
+$add_to_cart = '';
 
 if ($products->num_rows > 0) {
 	$prodCount = $products->num_rows;
@@ -14,6 +16,14 @@ if ($products->num_rows > 0) {
         $productstock = $row["Quantity"];
         $category = $row["CategoryName"];
         $imageURL = $row["ImageURL"];
+	$isSoldOut = $row["IsSoldOut"];
+
+	$add_to_cart = '<a id="CartLink" href="php/actions/addtocart.php?KeyProduct=' . $keyproduct . '" onclick="AddQuantity();" class="btn btn-large btn-primary pull-right"> Add To Cart ' .
+				'<i class="icon-shopping-cart"></i>' .
+			'</a>';
+	if($isSoldOut == 1){
+		$add_to_cart = '<span class="pull-right" style="color:red;font-weight:bold;">SOLD OUT</span>';
+	}
 
     }
 
