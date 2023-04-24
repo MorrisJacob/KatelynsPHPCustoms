@@ -63,7 +63,7 @@ include('php/pages/products_details.php');
 				</form>
 				
 				<hr class="soft"/>
-				<h4><?php echo $productstock; ?> of this item left in stock</h4>
+				<h4><?php echo $productstock; ?> of this item in stock</h4>
 				<!--<form class="form-horizontal qtyFrm pull-right">
 				  <div class="control-group">
 					<label class="control-label"><span>Color</span></label>

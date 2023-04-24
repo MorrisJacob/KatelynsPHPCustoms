@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$ImageURL = UploadImage($ProductName);
         if($ImageURL != "")
         {
-                    ExecuteSQL("INSERT INTO products (ProductName, Description, ImageURL, Price, Quantity, CategoryName, IsFeatured IsSoldOut) VALUES " .
+                    ExecuteSQL("INSERT INTO products (ProductName, Description, ImageURL, Price, Quantity, CategoryName, IsFeatured, IsSoldOut) VALUES " .
         "('" . $ProductName . "', '" . $Description . "', '" . $ImageURL . "', " . $Price . ", " . $Quantity . ", '" . $CategoryName . "', " . $IsFeatured . ", " . $IsSoldOut . ");");
        
 
