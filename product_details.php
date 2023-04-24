@@ -13,9 +13,7 @@ include('php/pages/products_details.php');
     <?php include('controls/breadcrumbs.php');?>
 	<div class="row">	  
 			<div id="gallery" class="span3">
-            <a href="<?php echo $imageURL; ?>" title="<?php echo $productdesc; ?>">
-				<img src="<?php echo $imageURL; ?>" alt="<?php echo $productdesc; ?>"/>
-            </a>
+				<img style="cursor:pointer;" src="<?php echo $imageURL; ?>" alt="<?php echo $productdesc; ?>" onclick="OpenPhotoSwipe('<?php echo $imageURL; ?>');"/>
 			<div id="differentview" class="moreOptopm carousel slide">
                 <!--<div class="carousel-inner">
                   <div class="item active">

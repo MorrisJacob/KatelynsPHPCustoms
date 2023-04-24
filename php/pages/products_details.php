@@ -25,6 +25,19 @@ if ($products->num_rows > 0) {
 		$add_to_cart = '<span class="pull-right" style="color:red;font-weight:bold;">SOLD OUT</span>';
 	}
 
+	$relatedImages = ExecuteSQL("SELECT ImageURL FROM productimages WHERE KeyProduct = " . $keyproduct . ";");
+
+	$relatedImagesHTML = "";
+	if ($relatedImages->num_rows > 0) {
+	    // output data of each row
+	    while($row = $relatedImages->fetch_assoc()) {
+
+		$imageURL = $row["ImageURL"];
+
+		$relatedImagesHTML .= "<img src='" . $imageURL . "' onclick=\"OpenPhotoSwipe('" . $imageURL . "');\" style='height:100px;margin:0 10px;cursor:pointer;' />";
+	    }
+	}
+
     }
 
 }
