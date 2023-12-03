@@ -35,7 +35,7 @@ include('php/pages/coupons.php');
                         <?php echo $couponsHTML; ?>
 
                         <div class="row tm-gold-text-imp" style="margin: 10px 0;">
-                        <a href="coupon-edit.php?KeyCoupon=0">
+                        <a href="coupon-edit.php?KeyCoupon=-1">
 			                <div class="col-xs-10">
                                  Add A New Coupon
 			                </div>

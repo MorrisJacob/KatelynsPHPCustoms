@@ -24,7 +24,7 @@ include('php/pages/products.php');
                     <div class="col-xs-4">
                         <h3 class="header">Product Categories</h3>
                         <div class="row tm-gold-text-imp" style="margin: 10px 0;">
-                            <a href="productcategory-edit.php?KeyCategory=0">
+                            <a href="productcategory-edit.php?KeyCategory=-1">
 			                        <div class="col-xs-8">
                                         Add A New Category
                                     </div>
@@ -37,7 +37,7 @@ include('php/pages/products.php');
                         <?php echo $productcategoriesHTML; ?>
 
                         <div class="row tm-gold-text-imp" style="margin: 10px 0;">
-                            <a href="productcategory-edit.php?KeyCategory=0">
+                            <a href="productcategory-edit.php?KeyCategory=-1">
 			                        <div class="col-xs-8">
                                         Add A New Category
                                     </div>
@@ -53,7 +53,7 @@ include('php/pages/products.php');
                     <div class="col-xs-7 col-xs-push-1">
                         <h3 class="header">Products</h3>
                         <div class="row tm-gold-text-imp" style="margin: 10px 0;">
-                        <a href="product-edit.php?KeyProduct=0">
+                        <a href="product-edit.php?KeyProduct=-1">
 			                <div class="col-xs-10">
                                  Add A New Product
 			                </div>
@@ -66,7 +66,7 @@ include('php/pages/products.php');
 		        </div>
                         <?php echo $productsHTML; ?>
                         <div class="row tm-gold-text-imp" style="margin: 10px 0;">
-                        <a href="product-edit.php?KeyProduct=0">
+                        <a href="product-edit.php?KeyProduct=-1">
 			                <div class="col-xs-10">
                                  Add A New Product
 			                </div>
