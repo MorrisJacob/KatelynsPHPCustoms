@@ -11,28 +11,20 @@ include('php/pages/contact.php');
 	<hr class="soften"/>	
 	<div class="row contact">
 		<div class="span4">
-		<h4>Contact Details</h4>
-            Taxidermy, Glasswork, Jewelry, Leatherwork, crochet, oddities, diorama work done By:<br/>
-            <div style="font-weight:bold;">Katelyn Myers</div><br/>
-			Email: <a href="mailto:myerskatelyn675@gmail.com">myerskatelyn675@gmail.com</a><br/>
-			Phone Number: <a href="tel://7655138703">765-513-8703</a><br/>
-			website: <a href="https://www.creativeodditiesandcuriosities.com">https://www.CreativeOdditiesAndCuriosities.com</a><br/><br/>
-            Photography By:<br/>
-            <div style="font-weight:bold;">Hayden Scott</div><br/>
-            Email: <a href="mailto:hjscott1203@gmail.com">hjscott1203@gmail.com</a><br/>
-            Phone Number: <a href="tel://3173858934">317-385-8934</a><br/>
-            Facebook: <a href="https://www.facebook.com/hayden.scott.142240" target="_blank">Hayden Scott (Stix Photography)</a><br/>
-            Instagram: <a href="https://www.instagram.com/stixphotography/" target="_blank">@Stixphotography</a><br/><br/>
-	Other Artists:
-            <div style="font-weight:bold;">Malorie Coalburn & Turner Geary</div><br/>
-            Honey Plugs Owner & Artist<br/>
-            Phone Number: <a href="tel://7654382902">765-438-2902</a><br/><br/>
+		    <h4>Contact Details</h4>
+		    Taxidermy, Glasswork, Jewelry, Leatherwork, crochet, oddities, diorama work done By:<br/>
+		    <div style="font-weight:bold;">Katelyn Myers</div><br/>
+		    Email: <a href="mailto:myerskatelyn675@gmail.com">myerskatelyn675@gmail.com</a><br/>
+		    Phone Number: <a href="tel://7655138703">765-513-8703</a><br/>
+		    Website: <a href="https://www.creativeodditiesandcuriosities.com">https://www.CreativeOdditiesAndCuriosities.com</a><br/><br/>
+		    Other Artists:
+		    <div style="font-weight:bold;">Malorie Coalburn & Turner Geary</div><br/>
+		    Honey Plugs Owner & Artist<br/>
+		    Phone Number: <a href="tel://7654382902">765-438-2902</a><br/><br/>
 
-            <div style="font-weight:bold;">Magic Man Products</div><br/>
-            Artist: David Montique<br/>
-            Phone Number: <a href="tel://7654806476">765-480-6476</a><br/><br/>
-
-
+		    <div style="font-weight:bold;">Magic Man Products</div><br/>
+		    Artist: David Montique<br/>
+		    Phone Number: <a href="tel://7654806476">765-480-6476</a><br/><br/>
 		</div>
 			
 		<div class="span4">

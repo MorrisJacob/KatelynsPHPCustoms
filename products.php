@@ -19,9 +19,6 @@ include('php/pages/products.php');
         Most of our products are sent as is. Wet specimens will be shipped WITHOUT fluid which will need replaced as soon as the item is received. If there are any specimens or custom works that you are interested in requesting, find your preferred method of communication under the contact tab ! If you have any comments, questions or concerns, please let us know!
 
 	</p>
-    <p>
-         Products photographed by Hayden Scott. Find their info on our <a href="/contact.php">Contact page</a>. 
-    </p>
 	<hr class="soft"/>
 	<form method="GET" action="products.php" class="form-horizontal span6">
 		<div class="control-group">

@@ -24,25 +24,18 @@
 				</ul>
 				<h5>Pickup</h5><br/>
 				<p>
-                    Any item is available for personal pick up upon request. Local to Kokomo, IN. Please contact Katelyn Myers at <a href="tel:7655138703">(765)513-8703</a>
-                    specifying which item(s) were purchased. 
+				    Any item is available for personal pick up upon request. Local to Kokomo, IN. Please contact Katelyn Myers at <a href="tel:7655138703">(765)513-8703</a>
+				    specifying which item(s) were purchased. 
 				</p>
-                <h5>Locations</h5><br/>
-                <p>Some items are available at various locations in Kokomo, IN. Specified items are also displayed with Matthew Davidson at Bohemian Tattoo Club:</p><br/>
-                <div style="width:48%;display:inline-block;">
-                    <b>Pinpoint Piercing</b><br/>
-                    918 S. Main St.<br/>
-                    Kokomo, IN 46901<br/>
-                    Mon-Sat 12pm - 8pm<br/>
-                    <a href="tel:7656393574">(765)639-3574</a>
-                </div>
-                <div style="width:48%;display:inline-block;">
-                    <b>Bohemian Tattoo</b><br/>
-                    206 N Main St.<br/>
-                    Kokomo, IN 46901<br/>
-                    Appointment Only<br/>
-                    <a href="tel:7654340066">(765)434-0066</a>
-                </div>
+				<h5>Locations</h5><br/>
+				<p>Some items are available at various locations in Kokomo, IN.</p><br/>
+				<div style="width:48%;display:inline-block;">
+				    <b>Pinpoint Piercing</b><br/>
+				    918 S. Main St.<br/>
+				    Kokomo, IN 46901<br/>
+				    Mon-Sat 12pm - 8pm<br/>
+				    <a href="tel:7656393574">(765)639-3574</a>
+				</div>
 			</div>
 		</div>
 	</div>
