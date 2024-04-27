@@ -8,6 +8,7 @@ $cartItems = ExecuteSQL("select o.KeyOrder, p.KeyProduct, p.productname, p.Price
 
 $cartItemsHTML = "";
 $total = 0;
+$taxes = 0;
 $shipping = 0;
 $discount = 0;
 $keyOrder = 0;
@@ -46,7 +47,9 @@ if ($cartItems->num_rows > 0) {
             $discount = $cartrow["DiscountAmount"];
     }
 
-    $shipping = 8;
+    $taxes = .07 * $total;
+    $total += $taxes;
+    $shipping = 10;
 
 }
 

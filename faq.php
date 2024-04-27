@@ -19,11 +19,11 @@
 	</div>
 	<div class="accordion-group">
 	  <div class="accordion-heading">
-		<h4><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseone">
+		<h4><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapsetwo">
 		  Are your products ethically sourced?
 		</a></h4>
 	  </div>
-	  <div id="collapseone" class="accordion-body collapse"  >
+	  <div id="collapsetwo" class="accordion-body collapse"  >
 		<div class="accordion-inner">
             All of our products on the website are ethically sourced. Please note that some custom requests may not have parts readily available which are ethically source. Please add this to your request if it is of importance to you.
 		</div>
@@ -31,11 +31,11 @@
 	</div>
 	<div class="accordion-group">
 	  <div class="accordion-heading">
-		<h4><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+		<h4><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapsethree">
 		  Do you sell weed?
 		</a></h4>
 	  </div>
-	  <div id="collapseTwo" class="accordion-body collapse"  >
+	  <div id="collapsethree" class="accordion-body collapse"  >
 		<div class="accordion-inner">
 				We currently sell no weed. Sorry.
 		</div>
@@ -43,11 +43,11 @@
 	</div>
 	<div class="accordion-group">
 	  <div class="accordion-heading">
-		<h4><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+		<h4><a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapsefour">
 		  Are You Sure?
 		</a></h4>
 	  </div>
-	  <div id="collapseThree" class="accordion-body collapse"  >
+	  <div id="collapsefour" class="accordion-body collapse"  >
 		<div class="accordion-inner">
 				Yeah, sorry.
 		</div>

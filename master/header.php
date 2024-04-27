@@ -139,7 +139,9 @@ include('php/master/header.php');
 	<span class="icon-bar"></span>
 </a>
   <div class="navbar-inner">
-    <a class="nav-title" href="index.php">Creative Curiosities</a>
+    <a class="nav-title" style = "float:unset;" href="index.php">
+	<img src="/wwwroot/images/logo.png" style="max-width:10%;float:left;margin:10px;"/>
+    </a>
 		<!--<a class="brand" href="index.php">Katelyn's Customs</a>-->
 		<form class="form-inline navbar-search" method="get" action="products.php" >
 		<input id="srchFld" name="searchField" class="srchTxt" type="text" value="<?php if(isset($_GET["searchField"])){ echo $_GET["searchField"]; } ?>" />

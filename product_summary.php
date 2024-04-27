@@ -27,6 +27,10 @@ include('php/pages/product_summary.php');
 							<?php echo $cartItemsHTML ?>
 				
                 <tr>
+                  <td colspan="3" style="text-align:right">Sales Tax:	</td>
+                  <td> $<?php echo number_format($taxes, 2); ?></td>
+                </tr>
+                <tr>
                   <td colspan="3" style="text-align:right">Total Price:	</td>
                   <td> $<?php echo number_format($total, 2); ?></td>
                 </tr>
