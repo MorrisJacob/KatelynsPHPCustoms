@@ -66,6 +66,12 @@ http://www.templatemo.com/tm-488-classic
                                 <li class="nav-item">
                                     <a href="coupons.php" class="nav-link">Coupons</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="vendors.php" class="nav-link">Vendors</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="shows.php" class="nav-link">Shows</a>
+                                </li>
                             </ul>                        
                         </div>
                         
@@ -75,3 +81,8 @@ http://www.templatemo.com/tm-488-classic
             </div>            
         </div>
         <hr/>
+<style>
+.navbar-nav .nav-link{
+	padding: 10px;
+}
+</style>

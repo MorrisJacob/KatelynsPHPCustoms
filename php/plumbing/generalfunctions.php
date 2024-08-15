@@ -1,5 +1,4 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . "/../php";
 function GetValidString($str){
     if((isset($str)) && !empty($str))
     {
@@ -21,24 +20,6 @@ function GetSafeString($str){
 }
 
 function SendEmail($toAddress, $subject, $message){
-	require_once "Mail.php";
-
-	$host = "ssl://smtp.bluehost.com";
-	$username = "DoNotReply@creativeodditiesandcuriosities.com";
-	$password = "qA#4#Re5JV%ig7D^";
-	$port = "465";
-	$to = $toAddress;
-	$email_from = $username;
-	$email_subject = $subject;
-	$email_body = $message;
-	$email_address = $username;
-
-	$headers = array ('From' => $email_from, 'To' => $to, 'Subject' => $email_subject, 'Reply-To' => $email_address);
-	$smtp = Mail::factory ('smtp', ['host' => $host, 'port' => $port, 'auth' => true, 'username' => $username, 'password' => $password]);
-	$mail = $smtp->send($to, $headers, $email_body);
-}
-
-function SendEmailOld($toAddress, $subject, $message){
     $sendingEmail = "DoNotReply@creativeodditiesandcuriosities.com";
 
     // use wordwrap() if lines are longer than 70 characters

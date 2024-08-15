@@ -3,6 +3,7 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $Name = GetSafeString($_POST['Name']);
     $companyName = GetSafeString($_POST['CompanyName']);
+    $phoneNumber = GetSafeString($_POST['PhoneNumber']);
     $location = GetSafeString($_POST['Location']);
     $description = GetSafeString($_POST['Description']);
 
@@ -10,8 +11,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $show_id = GetSafeString($_POST['Show']);
 
     ExecuteSQL("INSERT INTO Vendor " .
-    "(Name, CompanyName, LocatedFrom, Description, show_id) VALUES " .
-    "('" . $Name . "', '" . $companyName . "', '" . $location . "', '" . $description . "', " . $show_id . ");");
+    "(Name, CompanyName, PhoneNumber, LocatedFrom, Description, show_id) VALUES " .
+    "('" . $Name . "', '" . $companyName . "', '" . $phoneNumber . "', '" . $location . "', '" . $description . "', " . $show_id . ");");
 
     $vendorURLs = UploadImages($companyName);
                 
@@ -21,9 +22,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	    if(count($vendorURLs) > 0){
 		for($x=0; $x < count($vendorURLs); $x++){
 			ExecuteSQL("INSERT INTO vendor_images (ImageURL, vendor_id) VALUES " .
-				" ('" . $vendorURLs[$x] . "', (SELECT id FROM Vendor WHERE CompanyName = '" . $companyName . "'));");
+				" ('" . $vendorURLs[$x] . "', (SELECT MAX(id) FROM Vendor));");
 		}   
 	    }
+	
+	    SendEmail("myerskatelyn675@gmail.com", "A New Vendor has Filled out an application!", "A new vendor (" . $companyName . ") has filled out a new application on your website.");
 
 	    $success = "Thank you very much! We will be reaching out to you soon.";
 
@@ -31,19 +34,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 }else{
 
+    $showlist = "";
 
-    $showddl = "";
-
-    $shows = ExecuteSQL("SELECT id, CONCAT(ShowName, ' (', DATE_FORMAT(ShowDate,'%m/%d/%Y'), ')') ShowString FROM `show`;");
+    $shows = ExecuteSQL("SELECT id, ShowName, DATE_FORMAT(ShowDate,'%m/%d/%Y') ShowDate, Description, ImageURL FROM `show`;");
 
     if ($shows->num_rows > 0) {
 	    // output data of each row
-	    $showddl = "<select name='Show' class='form-control'>";
 	    while($row = $shows->fetch_assoc()) {
-		$showddl .= "<option value=" . $row["id"] . ">" . $row["ShowString"] . "</option>";
+		$showlist .= "<label for='radio-" . $row["id"] . "'>" .
+				"<div class='span3 text-center show-option' style='border: 1px solid black;padding:8px;'><input id='radio-" . $row["id"] . "' type='radio' style='margin-top:-10px;' name='Show' value='" . $row["id"] . "'/><br/>";
+		if(!is_null($row["ImageURL"])){
+			$showlist .= "<img src='../" . $row["ImageURL"] . "' class='img img-responsive' style='width:100%' />";
+		}
+		$showlist .=	"<h3 style='display:inline;'> " . $row["ShowName"] . "</h3>" .
+				"<hr/>" . 
+				"<h4>" . $row["ShowDate"] . "</h4>" .
+				"<p>" . $row["Description"] . "</p>" .
+			     "</div></label>";
+				
 
 	    }
-	    $showddl .= "</select>";
     }
 
 }
@@ -70,8 +80,7 @@ function UploadImages($vendorName){
                         $check = getimagesize($_FILES[$inputName]["tmp_name"][$i]);
                         if($check !== false) {
                                 //echo "File is an image - " . $check["mime"] . ".";
-                                $uploadOk = 1;
-                        } else {
+                                $uploadOk = 1; } else {
                                 echo "File is not an image.";
                                 $uploadOk = 0;
                         }

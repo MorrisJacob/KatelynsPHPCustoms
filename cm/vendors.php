@@ -9,16 +9,16 @@ include('php/pages/vendors.php');
                 <div class="row" style="margin-bottom:15px;">
                     <div class="col-xs-12">
 			<div class="row" style="font-weight:bold;">
-			    <div class="col-xs-12 col-md-2 hidden-sm-down">
+			    <div class="col-xs-12 col-md-3 hidden-sm-down">
 				Vendor Name
 			    </div>
 			    <div class="col-xs-12 col-md-2 hidden-sm-down">
 				Company Name
 			    </div>
 			    <div class="col-xs-12 col-md-2 hidden-sm-down">
-				Location
+				Contact Info
 			    </div>
-			    <div class="col-xs-12 col-md-2 hidden-sm-down">
+			    <div class="col-xs-12 col-md-3 hidden-sm-down">
 				Description
 			    </div>
 			    <div class="col-xs-12 col-md-2 hidden-sm-down">
